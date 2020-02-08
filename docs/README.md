@@ -76,7 +76,12 @@
 
 <script>
 export default {
+
+  
   data () {
+    const dataa = require('./.vuepress/data/features.json');
+
+    console.log(dataa);
       return {
           items: [
             'Developers',
@@ -87,4 +92,5 @@ export default {
       }
   },
 }
+
 </script>

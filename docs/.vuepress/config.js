@@ -1,21 +1,26 @@
+const config = require('./config.json');
+
+console.log('here');
+console.log(config);
+console.log(config.themeConfig.nav[1].text);
 module.exports = {
-    title: 'Bank of America Front End Engineering',
-    description: 'Just playing around',
-    themeConfig: {
-        searchPlaceholder: 'Search for it!',
-        nav: [
-            { text: 'Home', link: '/' },
-            { text: 'Guide', link: '/guide/' },
-            { text: 'External', link: 'https://google.com' },
-            {
-                text: 'Languages',
-                ariaLabel: 'Language Menu',
-                items: [
-                  { text: 'Chinese', link: '/language/chinese/' },
-                  { text: 'Japanese', link: '/language/japanese/' }
-                ]
-              }
-        ],
-        lastUpdated: 'Last Updated' // string | boolean
-    }
+  title: config.title,
+  description: config.description,
+  themeConfig: {
+      searchPlaceholder: config.themeConfig.searchPlaceholder,
+      nav: [
+          { text: config.themeConfig.nav[0].text, link: config.themeConfig.nav[0].link },
+          { text: config.themeConfig.nav[1].text, link: config.themeConfig.nav[1].link },
+          { text: config.themeConfig.nav[2].text, link: config.themeConfig.nav[2].link },
+          {
+              text: config.themeConfig.nav[3].text,
+              ariaLabel: config.themeConfig.nav[3].ariaLabel,
+              items: [
+                { text: config.themeConfig.nav[3].items[0].text, link: config.themeConfig.nav[3].items[0].link },
+                { text: config.themeConfig.nav[3].items[1].text, link: config.themeConfig.nav[3].items[1].link }
+              ]
+            }
+      ],
+      lastUpdated: config.themeConfig.lastUpdated
   }
+}
