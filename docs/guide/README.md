@@ -8,4 +8,3 @@ next: false
 
 ### step 1
 
-<TestAlert display-text="Test" />

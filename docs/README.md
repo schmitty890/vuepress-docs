@@ -79,16 +79,11 @@ export default {
 
   
   data () {
-    const dataa = require('./.vuepress/data/features.json');
+    const builtFor = require('./.vuepress/data/builtFor.json');
 
-    console.log(dataa);
+    console.log(builtFor);
       return {
-          items: [
-            'Developers',
-            'Engineers',
-            'Managers',
-            'Onboarding'
-          ]
+          items: builtFor
       }
   },
 }
