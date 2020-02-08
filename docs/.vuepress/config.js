@@ -15,6 +15,7 @@ module.exports = {
                   { text: 'Japanese', link: '/language/japanese/' }
                 ]
               }
-        ]
+        ],
+        lastUpdated: 'Last Updated' // string | boolean
     }
   }
