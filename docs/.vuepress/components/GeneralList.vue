@@ -9,7 +9,7 @@ Data structure rendered within this list component is
 -->
 <template>
 <ul class="list">
-  <li v-for="(item, index) in getDataTest(fileName).data" :key="item.title">
+  <li v-for="(item, index) in fetchDataFile(fileName).data" :key="item.title">
     {{  reverseMessageAsMethod(item.title) }}
   </li>
 </ul>
@@ -19,16 +19,18 @@ Data structure rendered within this list component is
 
 export default {
   
-   props: ['fileName'],
-
+  props: { 
+    fileName: String 
+  },
   data: function() {
     return {
       name: 'GeneralList Component'
     }
   },
   methods: {
-    getDataTest: function(fileName) {
-      const dataURL = require('../data/' + fileName + '.json');
+    fetchDataFile: function(fileName) {
+      console.log('called');
+      const dataURL = require('../data/' + fileName + '.json'); // if we restructure thie /data folder, this path routing will need to be looked at
       return {
         data: dataURL
       }
