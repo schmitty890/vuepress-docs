@@ -80,10 +80,12 @@ export default {
   
   data () {
     const builtFor = require('./.vuepress/data/builtFor.json');
+    const features = require('./.vuepress/data/features.json');
 
     console.log(builtFor);
       return {
-          items: builtFor
+          items: builtFor,
+          features: features
       }
   },
 }
