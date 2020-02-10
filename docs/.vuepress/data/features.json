@@ -1,10 +1,16 @@
 [{
-    "title": "title1",
-    "description": "description1"
+    "title": "Welcome",
+    "description": "New employees get started here! Our welcome page outlines the first blah blah blah",
+    "linkURL": "welcome",
+    "linkText": "Welcome"
 },{
     "title": "title2",
-    "description": "description2"
+    "description": "description2",
+    "linkURL": "welcome",
+    "linkText": "Welcome"
 },{
     "title": "title3",
-    "description": "description3"
+    "description": "description3",
+    "linkURL": "welcome",
+    "linkText": "Welcome"
 }]
