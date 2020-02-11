@@ -35,7 +35,7 @@ export default {
                 loopCount: Infinity
             };
             const typed = new Typed('#typed', options);
-        }
-    }
+        },
+    },
 }
 </script>

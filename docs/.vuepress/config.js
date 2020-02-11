@@ -1,4 +1,5 @@
 const config = require('./config.json');
+const moment = require('moment');
 
 console.log('here');
 console.log(config);
@@ -20,7 +21,18 @@ module.exports = {
                 { text: config.themeConfig.nav[3].items[1].text, link: config.themeConfig.nav[3].items[1].link }
               ]
             }
-      ],
-      lastUpdated: config.themeConfig.lastUpdated
-  }
+      ]
+  },
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          const moment = require('moment')
+          moment.locale(lang)
+          return moment(timestamp).fromNow()
+        }
+      }
+    ]
+  ]
 }
