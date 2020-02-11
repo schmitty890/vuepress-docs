@@ -5,7 +5,10 @@
 <script>
 export default {
     props: {
-        fileName: String
+        fileName: {
+            type: String,
+            required: true
+        }
     },
     data: function() {
         return {
