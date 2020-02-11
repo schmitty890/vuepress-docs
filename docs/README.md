@@ -2,6 +2,9 @@
 meta:
   - http-equiv: X-UA-Compatible
     content: IE=11
+link:
+  -rel: stylesheet
+  -href: test
 ---
 
 <main aria-labelledby="main-title" class="home">
@@ -19,6 +22,7 @@ meta:
     </p>
   </header>
   <FeatureCard fileName="features" />
+  <SlickList />
   <Footer />
 </main>
 

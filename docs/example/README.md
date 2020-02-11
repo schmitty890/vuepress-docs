@@ -12,3 +12,4 @@ here is our example for testing stuff
 
 <GeneralList fileName="roster" />
 
+<SlickList />

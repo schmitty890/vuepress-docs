@@ -1,83 +1,33 @@
+
+
 <template>
-<ul id="slick-list">
-    <div>{{ another }}</div>
-  <li v-for="item in items">
-    {{ item.title }}
-  </li>
-</ul>
+  <VueSlickCarousel v-bind="settings">
+    <div><h3>hi</h3></div>
+    <div><h3>hi</h3></div>
+    <div><h3>hi</h3></div>
+    <div><h3>hi</h3></div>
+    <div><h3>hi</h3></div>
+    <div><h3>hi</h3></div>
+  </VueSlickCarousel>
 </template>
 
 <script>
-export default {
-   components: { Slick },
-
+  import VueSlickCarousel from 'vue-slick-carousel'
+  // optional style for arrows & dots
+  import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+  export default {
+    components: { VueSlickCarousel },
     data() {
-        return {
-            slickOptions: {
-                slidesToShow: 3,
-                // Any other options that can be got from plugin documentation
-            },
-        };
+      return {
+        settings: {
+            slidesToShow: 3,
+            arrows: true,
+            dots: true,
+        },
+      }
     },
-
-    // All slick methods can be used too, example here
-    methods: {
-        next() {
-            this.$refs.slick.next();
-        },
-
-        prev() {
-            this.$refs.slick.prev();
-        },
-
-        reInit() {
-            // Helpful if you have to deal with v-for to update dynamic lists
-            this.$nextTick(() => {
-                this.$refs.slick.reSlick();
-            });
-        },
-
-        // Events listeners
-        handleAfterChange(event, slick, currentSlide) {
-            console.log('handleAfterChange', event, slick, currentSlide);
-        },
-        handleBeforeChange(event, slick, currentSlide, nextSlide) {
-            console.log('handleBeforeChange', event, slick, currentSlide, nextSlide);
-        },
-        handleBreakpoint(event, slick, breakpoint) {
-            console.log('handleBreakpoint', event, slick, breakpoint);
-        },
-        handleDestroy(event, slick) {
-            console.log('handleDestroy', event, slick);
-        },
-        handleEdge(event, slick, direction) {
-            console.log('handleEdge', event, slick, direction);
-        },
-        handleInit(event, slick) {
-            console.log('handleInit', event, slick);
-        },
-        handleReInit(event, slick) {
-            console.log('handleReInit', event, slick);
-        },
-        handleSetPosition(event, slick) {
-            console.log('handleSetPosition', event, slick);
-        },
-        handleSwipe(event, slick, direction) {
-            console.log('handleSwipe', event, slick, direction);
-        },
-        handleLazyLoaded(event, slick, image, imageSource) {
-            console.log('handleLazyLoaded', event, slick, image, imageSource);
-        },
-        handleLazeLoadError(event, slick, image, imageSource) {
-            console.log('handleLazeLoadError', event, slick, image, imageSource);
-        },
-    }
-}
-
+  }
 </script>
 
 <style scoped>
-li {
-    color: blue;
-}
 </style>
