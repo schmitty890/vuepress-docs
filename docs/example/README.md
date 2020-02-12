@@ -12,4 +12,4 @@ here is our example for testing stuff
 
 <GeneralList fileName="roster" />
 
-<SlickList />
+<SlickList slidesToScroll="2" dots autoplay />

@@ -22,7 +22,7 @@ link:
     </p>
   </header>
   <FeatureCard fileName="features" />
-  <SlickList />
+  <SlickList autoplay />
   <Footer />
 </main>
 

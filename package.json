@@ -16,9 +16,8 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
-    "moment": "^2.24.0",
     "typed.js": "^2.0.11",
-    "vue-slick-carousel": "^1.0.1",
+    "vue-slick-carousel": "^1.0.2",
     "vue-typed-js": "^0.1.2"
   }
 }
