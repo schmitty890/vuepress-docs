@@ -3,9 +3,10 @@ sidebar: auto
 prev: /
 next: false
 ---
-## the ultimate guide
+## Getting Started <Badge type="warning" text="In Progress"/>
 
 
-### step 1
 
+### How to use this site
 
+This

@@ -26,9 +26,9 @@ export default {
     },
     methods: {
         fetchDataFile: function(fileName) {
-            console.log('fetchDataFile function');
-            console.log(fileName);
-            const dataURL = require('../data/' + fileName + '.json'); // if we restructure the data folder we need to look at this
+            // console.log('fetchDataFile function');
+            // console.log(fileName);
+            const dataURL = require('../../data/' + fileName + '.json'); // if we restructure the data folder we need to look at this
             return {
                 data: dataURL
             }

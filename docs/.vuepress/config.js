@@ -3,6 +3,15 @@ const config = require('./config.json');
 module.exports = {
   title: config.title,
   description: config.description,
+  head: [
+    [
+      config.head[0][0],
+      {
+        rel: config.head[0][1].rel,
+        href: config.head[0][1].href
+      }
+    ]
+  ],
   themeConfig: {
       searchPlaceholder: config.themeConfig.searchPlaceholder,
       nav: [
@@ -21,7 +30,13 @@ module.exports = {
   },
   plugins: [
     [
-      '@vuepress/last-updated'
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp) => {
+          const dayjs = require('dayjs')
+          return dayjs(timestamp).format('MM-DD-YYYY')
+        }
+      }
     ]
   ]
 }

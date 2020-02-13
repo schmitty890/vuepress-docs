@@ -2,12 +2,12 @@
 
 <template>
   <VueSlickCarousel v-bind="settings">
-    <div><h3>hi</h3></div>
+    <div><h3>test1</h3></div>
     <div><h3>test2</h3></div>
-    <div><h3>hi3</h3></div>
-    <div><h3>hi4</h3></div>
-    <div><h3>hi5</h3></div>
-    <div><h3>hi6</h3></div>
+    <div><h3>test3</h3></div>
+    <div><h3>test4</h3></div>
+    <div><h3>test5</h3></div>
+    <div><h3>test6</h3></div>
   </VueSlickCarousel>
 </template>
 
@@ -46,7 +46,30 @@
             arrows: this.$props.arrows,
             dots: this.$props.dots,
             autoplay: this.$props.autoplay,
-            autoplaySpeed: Number(this.$props.autoplaySpeed) || 5000
+            autoplaySpeed: Number(this.$props.autoplaySpeed) || 5000,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: Number(this.$props.slidesToShow) || 3,
+                  slidesToScroll: 3
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
         },
       }
     },
@@ -55,7 +78,7 @@
     },
     methods: {
       init: function() {
-        console.log(this.$props.slides);
+        // console.log(this.$props.slides);
       }
     }
   }
