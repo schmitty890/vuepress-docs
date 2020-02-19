@@ -7,6 +7,7 @@ link:
   -href: test
 ---
 
+<GlobalMessage v-bind:show="true" />
 <main aria-labelledby="main-title" class="home">
   <header class="hero"><img src="/images/boa.png" alt="hero">
     <h1 id="main-title">

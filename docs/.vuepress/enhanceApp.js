@@ -14,6 +14,7 @@
 
 import SlickList from './components/Carousels/SlickList'
 import FeatureCard from './components/Cards/FeatureCard'
+import GlobalMessage from './components/Global/GlobalMessage'
 
 export default ({
     Vue, // the version of Vue being used in the VuePress app
@@ -23,4 +24,5 @@ export default ({
 }) => {     
     Vue.component('SlickList', SlickList)
     Vue.component('FeatureCard', FeatureCard)
+    Vue.component('GlobalMessage', GlobalMessage)
 }

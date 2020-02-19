@@ -34,7 +34,12 @@ module.exports = {
       {
         transformer: (timestamp) => {
           const dayjs = require('dayjs')
-          return dayjs(timestamp).format('MM-DD-YYYY')
+
+          const options = {
+            one: 'MM-DD-YYYY',
+            two: 'MMMM D, YYYY'
+          }
+          return dayjs(timestamp).format(options.two)
         }
       }
     ]
