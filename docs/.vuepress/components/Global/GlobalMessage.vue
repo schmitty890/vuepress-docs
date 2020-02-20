@@ -1,7 +1,6 @@
 <template>
   <div
     class="custom-block warning global-message-bar"
-    v-if="!closedGlobalMessage"
     v-show="showMessage"
   >
     <p class="custom-block-title">GLOBAL MESSAGE</p>
@@ -12,6 +11,8 @@
 </template>
 
 <script>
+import {storageValues} from '../../data/sessionAndLocalStorageData/globalMessageBar.js';
+console.log(storageValues)
 export default {
     props: {
         show: {
@@ -21,7 +22,7 @@ export default {
   data() {
     return {
       closedGlobalMessage: sessionStorage.closedGlobalMessage || undefined,
-    //   showMessage: false
+      // showMessage: false
       showMessage: this.$props.show
     };
   },
@@ -37,16 +38,16 @@ export default {
     },
     set_data: function() {
       console.log("set");
-      sessionStorage.setItem("closedGlobalMessage", true);
-      this.showMessage = false;
+      // sessionStorage.setItem("closedGlobalMessage", true);
+      // this.showMessage = false;
     },
     get_data: function() {
       console.log("get");
     //   this.set_data_to_false();
-      return sessionStorage.getItem("closedGlobalMessage");
+      // return sessionStorage.getItem("closedGlobalMessage");
     },
     set_data_to_false: function() {
-        sessionStorage.setItem("closedGlobalMessage", false);
+        // sessionStorage.setItem("closedGlobalMessage", false);
     }
   }
 };
