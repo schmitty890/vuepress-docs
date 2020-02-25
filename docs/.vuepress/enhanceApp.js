@@ -14,6 +14,7 @@
 
 import SlickList from './components/Carousels/SlickList'
 import RosterCarousel from './components/Carousels/RosterCarousel'
+import ButtonCarousel from './components/Carousels/ButtonCarousel'
 import FeatureCard from './components/Cards/FeatureCard'
 import GlobalMessage from './components/Global/GlobalMessage'
 
@@ -25,6 +26,7 @@ export default ({
 }) => {     
     Vue.component('SlickList', SlickList)
     Vue.component('RosterCarousel', RosterCarousel)
+    Vue.component('ButtonCarousel', ButtonCarousel)
     Vue.component('FeatureCard', FeatureCard)
     Vue.component('GlobalMessage', GlobalMessage)
 }

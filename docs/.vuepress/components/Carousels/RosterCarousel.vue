@@ -5,6 +5,9 @@
       v-for="(item, index) in fetchDataFile().data"
       :key="item.bnkID"
     >
+    <span v-if="item.teamLead" class="teamlead">
+        teamlead
+    </span>
       <img v-bind:src="item.photo" v-bind:alt="item.firstName + ' ' +
       item.lastName" />
       <div>{{ item.firstName }}</div>
@@ -24,6 +27,7 @@
 import VueSlickCarousel from "vue-slick-carousel";
 // optional style for arrows & dots
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import { SETTINGS } from './config';
 
 export default {
   components: { VueSlickCarousel },
@@ -50,12 +54,12 @@ export default {
   data() {
     return {
       settings: {
-        slidesToShow: Number(this.$props.slidesToShow) || 3,
-        slidesToScroll: Number(this.$props.slidesToScroll) || 1,
+        slidesToShow: Number(this.$props.slidesToShow) || SETTINGS.slidesToShow,
+        slidesToScroll: Number(this.$props.slidesToScroll) || SETTINGS.slidesToScroll,
         arrows: this.$props.arrows,
         dots: this.$props.dots,
         autoplay: this.$props.autoplay,
-        autoplaySpeed: Number(this.$props.autoplaySpeed) || 5000,
+        autoplaySpeed: Number(this.$props.autoplaySpeed) || SETTINGS.autoplaySpeed,
         responsive: [
           {
             breakpoint: 1024,
@@ -99,4 +103,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+    .teamlead {
+        position: absolute;
+    }
+</style>

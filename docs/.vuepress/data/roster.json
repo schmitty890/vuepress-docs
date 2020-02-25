@@ -6,9 +6,10 @@
     "phone": "7047701181",
     "birthDate": "01/13",
     "startDate": "2018-10-24",
-    "photo": "/images/default-profile-picture.jpg"
+    "photo": "/images/default-profile-picture.jpg",
+    "teamLead": "true"
 }, {
-    "firstName": "Jason",
+    "firstName": "Bob",
     "lastName": "Schmitt",
     "team": ["Money Tron"],
     "train": "Client Transactions",
@@ -17,7 +18,61 @@
     "startDate": "2017-04-24",
     "photo": "/images/default-profile-picture.jpg"
 }, {
-    "firstName": "Jason",
+    "firstName": "Ray",
+    "lastName": "Schmitt",
+    "team": ["Money Tron", "Triple M"],
+    "train": "Client Transactions",
+    "phone": "7047701181",
+    "birthDate": "01/13",
+    "startDate": "2011-10-24",
+    "photo": "/images/default-profile-picture.jpg"
+},{
+    "firstName": "Phil",
+    "lastName": "Schmitt",
+    "team": ["Money Tron", "Triple M"],
+    "train": "Client Transactions",
+    "phone": "7047701181",
+    "birthDate": "01/13",
+    "startDate": "2018-10-24",
+    "photo": "/images/default-profile-picture.jpg"
+}, {
+    "firstName": "Joe",
+    "lastName": "Schmitt",
+    "team": ["Money Tron"],
+    "train": "Client Transactions",
+    "phone": "7047701181",
+    "birthDate": "01/13",
+    "startDate": "2017-04-24",
+    "photo": "/images/default-profile-picture.jpg"
+}, {
+    "firstName": "Pat",
+    "lastName": "Schmitt",
+    "team": ["Money Tron", "Triple M"],
+    "train": "Client Transactions",
+    "phone": "7047701181",
+    "birthDate": "01/13",
+    "startDate": "2011-10-24",
+    "photo": "/images/default-profile-picture.jpg"
+},{
+    "firstName": "Aaron",
+    "lastName": "Schmitt",
+    "team": ["Money Tron", "Triple M"],
+    "train": "Client Transactions",
+    "phone": "7047701181",
+    "birthDate": "01/13",
+    "startDate": "2018-10-24",
+    "photo": "/images/default-profile-picture.jpg"
+}, {
+    "firstName": "Katie",
+    "lastName": "Schmitt",
+    "team": ["Money Tron"],
+    "train": "Client Transactions",
+    "phone": "7047701181",
+    "birthDate": "01/13",
+    "startDate": "2017-04-24",
+    "photo": "/images/default-profile-picture.jpg"
+}, {
+    "firstName": "Derek",
     "lastName": "Schmitt",
     "team": ["Money Tron", "Triple M"],
     "train": "Client Transactions",
