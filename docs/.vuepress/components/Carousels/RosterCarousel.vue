@@ -27,7 +27,7 @@
 import VueSlickCarousel from "vue-slick-carousel";
 // optional style for arrows & dots
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
-import { SETTINGS } from './config';
+import { SETTINGS_3_SLIDES, SETTINGS_5_SLIDES } from './config';
 
 export default {
   components: { VueSlickCarousel },
@@ -53,37 +53,7 @@ export default {
   },
   data() {
     return {
-      settings: {
-        slidesToShow: Number(this.$props.slidesToShow) || SETTINGS.slidesToShow,
-        slidesToScroll: Number(this.$props.slidesToScroll) || SETTINGS.slidesToScroll,
-        arrows: this.$props.arrows,
-        dots: this.$props.dots,
-        autoplay: this.$props.autoplay,
-        autoplaySpeed: Number(this.$props.autoplaySpeed) || SETTINGS.autoplaySpeed,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: Number(this.$props.slidesToShow) || 3,
-              slidesToScroll: 3
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      }
+      settings: SETTINGS_5_SLIDES
     };
   },
   mounted() {
@@ -107,4 +77,6 @@ export default {
     .teamlead {
         position: absolute;
     }
+
+
 </style>
