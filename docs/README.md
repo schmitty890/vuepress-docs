@@ -26,5 +26,3 @@ link:
   <SlickList autoplay />
   <Footer />
 </main>
-
-
